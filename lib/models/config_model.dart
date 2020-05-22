@@ -5,13 +5,13 @@ class Config {
 
   Config({this.seguro, this.imposto, this.minSeguro});
 
-  Config.fromJson(Map<String, dynamic> json) {
-    seguro = json['seguro'];
-    imposto = json['imposto'];
-    minSeguro = json['min_seguro'];
+  Config.fromMap(Map<String, dynamic> map) {
+    seguro = map['seguro'];
+    imposto = map['imposto'];
+    minSeguro = map['min_seguro'];
   }
 
-  Map<String, dynamic> toJson() {
+  Map<String, dynamic> toMap() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
     data['seguro'] = this.seguro;
     data['imposto'] = this.imposto;
