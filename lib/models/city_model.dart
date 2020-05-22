@@ -1,4 +1,8 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/material.dart';
+
 class City {
+  int id;
   String name;
   double freteKg;
   double freteNf;
@@ -8,15 +12,17 @@ class City {
   String obs;
 
   City(
-      {this.name,
-      this.freteKg,
-      this.freteNf,
-      this.redespacho,
+      {@required this.id,
+      @required this.name,
+      @required this.freteKg,
+      @required this.freteNf,
+      @required this.redespacho,
       this.ajuste,
-      this.freteMin,
+      @required this.freteMin,
       this.obs});
 
   City.fromMap(Map<String, dynamic> map) {
+    id = map['id'];
     name = map['name'];
     freteKg = map['freteKg'];
     freteNf = map['freteNf'];
@@ -28,6 +34,8 @@ class City {
 
   Map<String, dynamic> toMap() {
     final Map<String, dynamic> data = new Map<String, dynamic>();
+
+    data['id'] = this.id;
     data['name'] = this.name;
     data['freteKg'] = this.freteKg;
     data['freteNf'] = this.freteNf;
@@ -36,5 +44,19 @@ class City {
     data['frete_min'] = this.freteMin;
     data['obs'] = this.obs;
     return data;
+  }
+
+  void setFirebase() async {
+    await Firestore.instance
+        .collection("city")
+        .document(this.id.toString())
+        .setData(toMap());
+  }
+
+  void deleteFirebase() async {
+    await Firestore.instance
+        .collection("city")
+        .document(this.id.toString())
+        .delete();
   }
 }
