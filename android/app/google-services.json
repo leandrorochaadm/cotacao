@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "679054410947",
+    "firebase_url": "https://contacao-e2c21.firebaseio.com",
+    "project_id": "contacao-e2c21",
+    "storage_bucket": "contacao-e2c21.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:679054410947:android:6175a59d03934ca7d70e76",
+        "android_client_info": {
+          "package_name": "com.leandrorocha.cotacao"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "679054410947-fmtgs10pts8gbuhlks21olpkoa8cm7md.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA15o7tvMRVvd-YSC2crmIumSB0ipIj7b0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "679054410947-fmtgs10pts8gbuhlks21olpkoa8cm7md.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
